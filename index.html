@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple · Strategic Account · Cursor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --card-bg: #f5f5f7;
+      --divider: #e0e0e0;
+      --positive: #1d7a3a;
+      --negative: #c0392b;
+      --tier-2-accent: #0071e3;
+      --tier-3-border: #d0d0d5;
+      --radius: 4px;
+      --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .reveal {
+      font-family: var(--font);
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .reveal .slides,
+    .reveal .slides section,
+    .reveal .viewport {
+      background: var(--bg);
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    .slide-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      background: var(--bg);
+    }
+
+    .slide-main {
+      flex: 1;
+      padding: 22px 40px 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      max-width: 1360px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide-header {
+      border-bottom: 0.5px solid var(--divider);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .slide-body {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .slide-footer {
+      flex-shrink: 0;
+      border-top: 0.5px solid var(--divider);
+      padding: 10px 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: var(--bg);
+    }
+
+    .footer-left {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .footer-badge {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--text);
+      color: #ffffff;
+      padding: 4px 8px;
+      border-radius: 2px;
+    }
+
+    .reveal .progress {
+      height: 2px;
+      color: #e8e8ed;
+    }
+
+    .reveal .progress span {
+      background: #86868b;
+      transition-duration: 0.3s;
+    }
+
+    /* Chrome */
+    .deck-chrome {
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      pointer-events: none;
+    }
+
+    .deck-chrome * {
+      pointer-events: auto;
+    }
+
+    .home-btn {
+      width: 32px;
+      height: 32px;
+      border: 0.5px solid var(--divider);
+      border-radius: 4px;
+      background: var(--card-bg);
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s, border-color 0.2s;
+      padding: 0;
+    }
+
+    .home-btn:hover {
+      color: var(--text);
+      border-color: #86868b;
+    }
+
+    .home-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .section-indicator {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    /* Typography */
+    .eyebrow {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin: 0 0 5px;
+    }
+
+    .headline,
+    .reveal .slide-header h2.headline {
+      font-family: var(--font);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      margin: 0;
+      text-transform: none;
+    }
+
+    /* Dense slides: reclaim space without shrinking title below 17px */
+    .slide-dense .slide-header {
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .slide-dense .slide-main {
+      padding-top: 20px;
+    }
+
+    .slide-dense .subhead {
+      margin-bottom: 6px;
+    }
+
+    .slide-dense .pillars {
+      gap: 8px;
+    }
+
+    .slide-dense .pillar {
+      padding: 8px;
+      gap: 10px;
+    }
+
+    .slide-dense .initiative-body {
+      line-height: 1.4;
+    }
+
+    .slide-dense .tier-block {
+      margin-bottom: 10px;
+    }
+
+    .slide-dense .tier-label {
+      margin-bottom: 6px;
+    }
+
+    .slide-dense .opp-row {
+      gap: 8px;
+    }
+
+    .slide-dense .opp-card-main {
+      padding: 8px 10px;
+    }
+
+    .slide-dense .opp-labeled-section {
+      padding: 6px 10px 7px;
+    }
+
+    .slide-dense .opp-labeled-section:last-child {
+      padding-bottom: 8px;
+    }
+
+    .slide-dense .slide-footer {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .subhead {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      margin: 0 0 10px;
+      max-width: 900px;
+    }
+
+    .hero-line {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      margin: 12px 0 0;
+    }
+
+    /* Account thesis — WWDC moment */
+    .reveal .slides section.slide-thesis-moment,
+    .reveal .slides section.slide-thesis-moment > section {
+      background: var(--bg);
+      text-align: center;
+    }
+
+    .slide-thesis-moment .slide-layout {
+      background: var(--bg);
+      max-width: none;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thesis-moment-stage {
+      text-align: center;
+      padding: 0 72px;
+      max-width: 1180px;
+      box-sizing: border-box;
+    }
+
+    .thesis-moment-hero {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      text-align: center;
+      text-transform: none;
+    }
+
+    .thesis-moment-line {
+      display: block;
+      font-size: 56px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .thesis-moment-line-punch {
+      margin-top: 16px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .placeholder-sub {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .reveal strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .section-label,
+    .tier-label,
+    .pillar-name {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    /* Cards */
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .metric-box {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+    }
+
+    .metric-box .label {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .metric-box .value {
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    .metric-box .delta {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    .metric-box .delta.up { color: var(--positive); }
+
+    .segment-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .segment-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 8px 10px 10px;
+      overflow: hidden;
+    }
+
+    .segment-bar {
+      height: 3px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+      background: var(--divider);
+    }
+
+    .segment-card .name {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .segment-card .stats {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .segment-card .trend {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .trend.positive { color: var(--positive); }
+    .trend.negative { color: var(--negative); }
+    .trend.neutral { color: var(--text-secondary); }
+
+    .pulse-banner,
+    .banner.leadership,
+    .implication-box {
+      background: var(--card-bg);
+      border: none;
+      border-bottom: 0.5px solid var(--divider);
+      border-radius: 0;
+      padding: 10px 0;
+      margin-bottom: 12px;
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .pulse-banner strong,
+    .banner.leadership strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .implication-box {
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      margin-bottom: 0;
+    }
+
+    .flywheel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .flywheel-step {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+    }
+
+    .flywheel-step .num {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .flywheel-step .title {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+
+    .flywheel-step .body {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* Big Rocks */
+    .big-rocks-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .rock-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-left: 2px solid var(--text);
+      border-radius: var(--radius);
+      padding: 10px 10px 12px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .rock-card .rock-num {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .rock-card .rock-title {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .rock-card .rock-body {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    /* Threat grid */
+    .threat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .threat-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .threat-card .title {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+      line-height: 1.35;
+    }
+
+    .threat-card .body {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      flex: 1;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0;
+      background: none;
+      color: var(--text-secondary);
+      align-self: flex-start;
+    }
+
+    .implication-box .implication-label {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .implication-box .implication-body {
+      font-size: 8.5px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Pillars */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .pillar {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 10px 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pillar .pillar-name {
+      margin-bottom: 4px;
+    }
+
+    .initiative {
+      padding: 0;
+    }
+
+    .initiative-title {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .initiative-body {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .initiative-key .initiative-title::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--negative);
+      margin-right: 5px;
+      vertical-align: middle;
+      position: relative;
+      top: -0.5px;
+      flex-shrink: 0;
+    }
+
+    /* Opportunities */
+    .tier-block {
+      margin-bottom: 14px;
+    }
+
+    .tier-label {
+      margin-bottom: 8px;
+    }
+
+    .opp-row {
+      display: grid;
+      gap: 10px;
+    }
+
+    .opp-row.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .opp-row.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .opp-row.cols-1 { grid-template-columns: 1fr; }
+
+    .opp-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .opp-card.tier-1 { border-left: 2px solid var(--positive); }
+    .opp-card.tier-2 { border-left: 2px solid var(--tier-2-accent); }
+    .opp-card.tier-3 { border-left: 2px solid var(--tier-3-border); }
+
+    .opp-card-main {
+      padding: 10px 12px;
+    }
+
+    .opp-card .opp-title {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+      line-height: 1.35;
+    }
+
+    .opp-card .opp-body {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      margin-bottom: 0;
+    }
+
+    .opp-labeled-section {
+      background: var(--bg);
+      border-top: 0.5px solid var(--divider);
+      padding: 7px 12px 8px;
+    }
+
+    .opp-labeled-section:last-child {
+      padding-bottom: 10px;
+    }
+
+    .opp-field-label {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .opp-field-label.label-why {
+      color: var(--positive);
+    }
+
+    .opp-field-label.label-consequence {
+      color: var(--negative);
+    }
+
+    .opp-field-text {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .slide-placeholder .slide-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Organization Map */
+    .slide-org .slide-body {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .slide-org .subhead {
+      margin-bottom: 8px;
+    }
+
+    .org-container {
+      position: relative;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    .org-connectors {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .org-layout {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      min-height: 0;
+    }
+
+    .org-tree-wrap {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+      overflow: visible;
+      transform: scale(0.9);
+      transform-origin: top center;
+    }
+
+    .org-tree {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .org-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .org-children {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
+      padding-top: 14px;
+    }
+
+    .org-branch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .org-floating {
+      flex-shrink: 0;
+      align-self: flex-start;
+      padding-top: 0;
+      margin-left: -18px;
+    }
+
+    .org-children-kremenek {
+      display: flex;
+      justify-content: flex-start;
+      padding-top: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .org-children-kremenek > .org-branch {
+      transition: transform 0s;
+    }
+
+    .org-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--divider);
+      border-radius: 5px;
+      padding: 7px 8px 8px;
+      box-sizing: border-box;
+      width: 158px;
+      max-width: 158px;
+    }
+
+    .org-card-dashed {
+      border: 0.5px dashed #aaaaaa;
+    }
+
+    .org-name {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
+
+    .org-title {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+
+    .org-note-rule {
+      border-top: 0.5px solid #d2d2d7;
+      margin: 6px 0 5px;
+    }
+
+    .org-note {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .slide-footer-org {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .slide-footer-org .footer-org-right {
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* Messaging slide */
+    .slide-messaging .slide-body {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      flex: 1;
+    }
+
+    .messaging-columns {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    .messaging-card {
+      background: var(--card-bg);
+      border: 0.5px solid #d2d2d7;
+      border-radius: 4px;
+      padding: 8px 9px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow-y: auto;
+      text-align: left;
+    }
+
+    .messaging-rule {
+      border: none;
+      border-top: 0.5px solid #d2d2d7;
+      margin: 6px 0;
+      width: 100%;
+    }
+
+    .messaging-person {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .messaging-avatar-wrap {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+
+    .messaging-avatar-wrap img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #e6f1fb;
+    }
+
+    .messaging-initials {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #e6f1fb;
+      color: #185fa5;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 600;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .messaging-avatar-wrap.is-fallback img {
+      display: none;
+    }
+
+    .messaging-avatar-wrap.is-fallback .messaging-initials {
+      display: flex;
+    }
+
+    .messaging-avatar-wrap.avatar-green img {
+      background: #e1f5ee;
+    }
+
+    .messaging-avatar-wrap.avatar-green .messaging-initials {
+      background: #e1f5ee;
+      color: #0f6e56;
+    }
+
+    .messaging-avatar-wrap.avatar-purple img {
+      background: #f0eeff;
+    }
+
+    .messaging-avatar-wrap.avatar-purple .messaging-initials {
+      background: #f0eeff;
+      color: #5b44c9;
+    }
+
+    .messaging-name {
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .messaging-person-title {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.35;
+      margin: 2px 0 0;
+    }
+
+    .channel-badge {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 7px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 7px;
+      border-radius: 999px;
+      margin: 6px 0 5px;
+      align-self: flex-start;
+    }
+
+    .channel-badge.badge-email {
+      background: #e6f1fb;
+      color: #185fa5;
+    }
+
+    .channel-badge.badge-forums {
+      background: #e1f5ee;
+      color: #0f6e56;
+    }
+
+    .channel-badge.badge-investor {
+      background: #f0eeff;
+      color: #5b44c9;
+    }
+
+    .messaging-rationale {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .messaging-draft-label {
+      font-family: var(--font);
+      font-size: 7px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin: 0 0 4px;
+    }
+
+    .messaging-subject {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin: 0 0 6px;
+    }
+
+    .messaging-draft-body {
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      white-space: pre-line;
+      margin: 0;
+    }
+
+    .slide-messaging .slide-footer {
+      font-size: 7.5px;
+    }
+
+    /* 90-Day Momentum Plan */
+    .slide-momentum .slide-body {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      flex: 1;
+    }
+
+    .momentum-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    .momentum-phase {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+
+    .momentum-phase-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .momentum-phase-head-text {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .momentum-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: var(--font);
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      line-height: 1.2;
+    }
+
+    .momentum-badge.badge-foundation {
+      background: #eeedfe;
+      color: #3c3489;
+    }
+
+    .momentum-badge.badge-build {
+      background: #e1f5ee;
+      color: #085041;
+    }
+
+    .momentum-badge.badge-conversion {
+      background: #faeeda;
+      color: #633806;
+    }
+
+    .momentum-phase-title {
+      font-family: var(--font);
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .momentum-phase-sub {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin: 2px 0 0;
+    }
+
+    .momentum-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .momentum-card {
+      background: var(--card-bg);
+      border: 0.5px solid #d2d2d7;
+      border-radius: 4px;
+      padding: 5px 7px 6px;
+      min-height: 0;
+    }
+
+    .momentum-card-label {
+      font-family: var(--font);
+      font-size: 8.5px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+      margin: 0 0 3px;
+    }
+
+    .momentum-card-detail {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .momentum-goal {
+      background: var(--card-bg);
+      border: 0.5px solid #d2d2d7;
+      border-radius: 4px;
+      padding: 5px 8px 6px;
+      margin-top: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .momentum-goal-label {
+      font-family: var(--font);
+      font-size: 6.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin: 0 0 3px;
+    }
+
+    .momentum-goal-text {
+      font-family: var(--font);
+      font-size: 7.5px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .slide-momentum.slide-dense .slide-header {
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+    }
+
+    .slide-momentum .momentum-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    .slide-momentum .momentum-phase {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+
+    .slide-momentum .momentum-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      flex: none;
+    }
+
+    .slide-momentum .momentum-goal {
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+
+    .momentum-phase .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .momentum-phase .phase-header .momentum-phase-title {
+      margin: 0;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .momentum-phase .phase-header .momentum-badge {
+      flex-shrink: 0;
+    }
+
+    .momentum-card .card-icon {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      display: block;
+      line-height: 1;
+    }
+
+    .reveal .slides section:focus {
+      outline: none;
+    }
+
+    .reveal .slides section,
+    .reveal .slides section > section {
+      box-shadow: none;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4,
+    .reveal p {
+      text-align: left;
+      text-transform: none;
+    }
+
+    .reveal .slide-thesis-moment .thesis-moment-hero,
+    .reveal .slide-thesis-moment .thesis-moment-line {
+      text-align: center;
+    }
+
+
+    body {
+      background: #ffffff;
+    }
+
+    @media (max-width: 1400px) {
+      .slide-main { padding: 20px 32px 12px; }
+      .slide-footer { padding: 10px 32px; }
+      .headline,
+      .reveal .slide-header h2.headline { font-size: 16px; }
+      .thesis-moment-line { font-size: 46px; }
+      .thesis-moment-stage { padding: 0 48px; }
+    }
+
+    @media (max-width: 1100px) {
+      .thesis-moment-line { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck-chrome">
+    <button class="home-btn" id="home-btn" title="Return to start" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1V9.5z"/>
+      </svg>
+    </button>
+    <span class="section-indicator" id="section-indicator">Account Thesis</span>
+  </div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Section 1: Account Thesis -->
+      <section data-section-name="Account Thesis">
+        <section class="slide-hero">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · May 2026</p>
+                <h2 class="headline">Account Thesis</h2>
+              </div>
+              <div class="slide-body">
+                <p class="hero-line">Why Apple, why now, why Cursor</p>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-thesis-moment">
+          <div class="slide-layout">
+            <div class="thesis-moment-stage">
+              <h2 class="thesis-moment-hero">
+                <span class="thesis-moment-line">Apple built the world's most valuable company on hardware.</span>
+                <span class="thesis-moment-line thesis-moment-line-punch">Now its future depends on software it hasn't been able to ship.</span>
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide-compact">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">FY2025 Full Year + FY2026 Pulse</p>
+                <h2 class="headline">A $416B revenue machine built on hardware lock-in and a growing services layer</h2>
+              </div>
+              <div class="slide-body">
+                <p class="subhead">iPhone drives volume. Services drives margin. Silicon ties it all together.</p>
+
+          <div class="metric-row">
+            <div class="metric-box">
+              <div class="label">Total Revenue</div>
+              <div class="value">$416B</div>
+              <div class="delta up">↑6% YoY</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Net Income</div>
+              <div class="value">$112B</div>
+              <div class="delta">~27% net margin</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Active Devices</div>
+              <div class="value">2.5B+</div>
+              <div class="delta up">all-time high</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">R&amp;D Spend</div>
+              <div class="value">$34B</div>
+              <div class="delta">30-yr high % of rev</div>
+            </div>
+          </div>
+
+          <div class="segment-row">
+            <div class="segment-card">
+              <div class="segment-bar" style="width:100%"></div>
+              <div class="name">iPhone</div>
+              <div class="stats">$210B · 50%</div>
+              <div class="trend neutral">↑ Stable</div>
+            </div>
+            <div class="segment-card">
+              <div class="segment-bar" style="width:52%"></div>
+              <div class="name">Services</div>
+              <div class="stats">$109B · 26% · 71% gross margin</div>
+              <div class="trend positive">↑14% YoY</div>
+            </div>
+            <div class="segment-card">
+              <div class="segment-bar" style="width:20%"></div>
+              <div class="name">Wearables</div>
+              <div class="stats">$42B · 10%</div>
+              <div class="trend negative">↓ Shrinking</div>
+            </div>
+            <div class="segment-card">
+              <div class="segment-bar" style="width:14%"></div>
+              <div class="name">Mac</div>
+              <div class="stats">$31B · 7%</div>
+              <div class="trend positive">↑ Steady</div>
+            </div>
+            <div class="segment-card">
+              <div class="segment-bar" style="width:14%"></div>
+              <div class="name">iPad</div>
+              <div class="stats">$28B · 7%</div>
+              <div class="trend neutral">→ Flat</div>
+            </div>
+          </div>
+
+          <div class="pulse-banner">
+            <strong>FY2026 Q2 Pulse:</strong> Revenue $95.4B ↑17% YoY · iPhone ↑22% · Services $26.6B ↑13% all-time record · Q1 single-quarter record $143.8B
+          </div>
+
+          <div class="flywheel">
+            <div class="flywheel-step">
+              <div class="num">01</div>
+              <div class="title">Sell hardware at premium</div>
+              <div class="body">iPhone anchors 50% of revenue. Apple Silicon gives unmatched performance — now the foundation for on-device AI. 2.5B active devices = the world's largest premium installed base.</div>
+            </div>
+            <div class="flywheel-step">
+              <div class="num">02</div>
+              <div class="title">Lock users into the ecosystem</div>
+              <div class="body">iMessage, AirDrop, Handoff, iCloud, App Store — each feature raises the cost of switching. Once a user owns iPhone + Mac + Watch + AirPods, Android becomes nearly impossible to migrate to.</div>
+            </div>
+            <div class="flywheel-step">
+              <div class="num">03</div>
+              <div class="title">Monetize the base via Services</div>
+              <div class="body">App Store, iCloud, Apple TV+, Apple Pay, AppleCare, advertising. Services hit $109B in FY2025 at ~71% gross margin — far exceeding hardware's ~37%. This is now the engine of profit growth.</div>
+            </div>
+            <div class="flywheel-step">
+              <div class="num">04</div>
+              <div class="title">Reinvest into next hardware cycle</div>
+              <div class="body">R&amp;D at a 30-year high (10.3% of revenue). Money flows into Apple Silicon, Apple Intelligence, and Private Cloud Compute — funding the next iPhone supercycle and keeping the flywheel spinning.</div>
+            </div>
+          </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · Macro &amp; Competitive Context · May 2026</p>
+                <h2 class="headline">Six converging threats Apple has never faced simultaneously</h2>
+              </div>
+              <div class="slide-body">
+                <p class="subhead">Each is manageable alone. Together, they define Ternus's first term.</p>
+
+          <div class="threat-grid">
+            <div class="threat-card">
+              <div class="title">AI deficit vs. Google &amp; Microsoft</div>
+              <div class="body">The old Siri architecture couldn't merge with the new one — engineers had to rebuild from scratch, causing two years of delays. Apple ran ads for features that didn't exist. Google Cloud ↑63% YoY, Microsoft AI at $37B run rate. Apple is the only Mag-7 company without a shipped AI product — and is now paying Google $1B/yr to power the very assistant it couldn't build itself.</div>
+              <span class="badge critical">Critical · Now</span>
+            </div>
+            <div class="threat-card">
+              <div class="title">$20B Google deal at legal risk</div>
+              <div class="body">Google pays Apple ~$20B/yr for default search on iOS — propping up Services, Apple's #2 segment at $109B and its highest-margin business at ~71% gross margin. DOJ cross-appeal could end it, wiping ~18% of operating income overnight.</div>
+              <span class="badge critical">Critical · 1–3 Yrs</span>
+            </div>
+            <div class="threat-card">
+              <div class="title">OpenAI — AI-native device threat</div>
+              <div class="body">OpenAI is building hardware designed to replace the smartphone entirely. If AI agents handle tasks people use iPhones for, the form factor itself becomes contestable for the first time in 15 years.</div>
+              <span class="badge high">High · 2–4 Yrs</span>
+            </div>
+            <div class="threat-card">
+              <div class="title">Foldables — 5 years behind Samsung</div>
+              <div class="body">Samsung has shipped foldables since 2019. Apple enters fall 2026. Every engineer must ramp on new APIs and UI paradigms simultaneously — under a new CEO.</div>
+              <span class="badge urgent">Urgent · Now</span>
+            </div>
+            <div class="threat-card">
+              <div class="title">China Competition</div>
+              <div class="body">Apple share slid from 19% to 15% through 2024 as Huawei launched homegrown Kirin silicon and HarmonyOS. The iPhone 17 cycle reversed it — Apple and Huawei now trade the #1 spot at ~20% share. Without matching Huawei's vertically integrated silicon + AI stack, the recovery won't hold.</div>
+              <span class="badge high">High · Structural</span>
+            </div>
+            <div class="threat-card">
+              <div class="title">Tariff &amp; margin compression</div>
+              <div class="body">90% of production in China. At peak rates, iPhone margins were nearly wiped out. Apple is racing to shift assembly to India by end of 2026.</div>
+              <span class="badge high">High · Now</span>
+            </div>
+          </div>
+
+          <div class="banner leadership">
+            <strong>Leadership context:</strong> John Ternus becomes CEO Sept 1 — the first hardware engineer to lead Apple since Steve Jobs, signaling a return to product-centric roots after 15 years of operational leadership under Cook. First-time public company CEO inheriting all six of these on day one. No runway to find his footing.
+          </div>
+
+          <div class="implication-box">
+            <div class="implication-label">Implication</div>
+            <div class="implication-body">Every one of these pressures tightens Apple's window to prove AI can sustain its growth model. Hardware margins are under attack from multiple directions — the only path forward is software and services carrying more weight, which only works if Apple ships AI faster than it ever has. Developer velocity is now a boardroom-level problem. Apple has already chosen Anthropic's Claude as the AI layer inside Xcode 26.3 — and Cursor is where more Claude is consumed than anywhere else on the planet. The window is open. The proof point is airtight.</div>
+          </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact slide-dense">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · FY2026 Strategic Priorities · sourced from earnings calls + SEC filings</p>
+                <h2 class="headline">Big Rocks</h2>
+              </div>
+              <div class="slide-body">
+                <p class="subhead">Five stated priorities drawn directly from Tim Cook, John Ternus, and CFO Kevan Parekh — Q1 and Q2 FY2026 earnings calls</p>
+
+                <div class="big-rocks-row">
+                  <div class="rock-card">
+                    <div class="rock-num">01</div>
+                    <div class="rock-title">Ship Apple Intelligence — specifically a revamped Siri</div>
+                    <div class="rock-body">R&amp;D is at a 30-year high, scaling "rather significantly" year over year per Cook. Ternus called the roadmap "the most exciting time in my 25-year career." Every analyst question on the Q2 call was about Siri timing. This is the #1 stated and implied priority for FY2026.</div>
+                  </div>
+                  <div class="rock-card">
+                    <div class="rock-num">02</div>
+                    <div class="rock-title">Sustain Services growth and reach escape velocity</div>
+                    <div class="rock-body">Services hit a record $30.98B in Q2 FY2026, up 16% YoY, now approaching half of Apple's gross profit on a third of revenue. Cook called out "yet another all-time record" on both Q1 and Q2 calls. Wall Street is pricing the stock on Services trajectory.</div>
+                  </div>
+                  <div class="rock-card">
+                    <div class="rock-num">03</div>
+                    <div class="rock-title">Drive the iPhone AI upgrade supercycle</div>
+                    <div class="rock-body">iPhone grew 22% YoY in Q2 despite supply constraints. The iPhone 17 family is "the most popular lineup in our history." The bet: Apple Intelligence features in the A19 chip drive upgrades from iPhone 15/16 users. Delivering AI that compels upgrades is an explicit FY2026 KPI.</div>
+                  </div>
+                  <div class="rock-card">
+                    <div class="rock-num">04</div>
+                    <div class="rock-title">Hold China, accelerate India</div>
+                    <div class="rock-body">After years of erosion, Q2 showed strong double-digit growth in Greater China. India shipments up ~20% in Q1 2026. Apple set records in both developed and emerging markets. Holding China recovery while expanding India share — tied directly to the supply chain migration Sabih Khan is executing.</div>
+                  </div>
+                  <div class="rock-card">
+                    <div class="rock-num">05</div>
+                    <div class="rock-title">Smooth CEO transition — financial discipline and Wall Street confidence</div>
+                    <div class="rock-body">Ternus on his first earnings call committed to Cook's "deep thoughtfulness, deliberateness and discipline" on capital allocation. Board authorized $100B in buybacks and a 4% dividend increase simultaneously. Analyst confidence in the transition is itself a business risk Apple is actively managing.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact slide-dense">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · Slide 3 · Strategies &amp; Initiatives</p>
+                <h2 class="headline">How Apple is responding — specific programs, reorgs, and bets</h2>
+              </div>
+              <div class="slide-body">
+
+          <div class="pillars">
+            <div class="pillar">
+              <div class="pillar-name">Reorgs</div>
+              <div class="initiative initiative-key">
+                <div class="initiative-title">AI org dismantled — Giannandrea out, AI split three ways</div>
+                <div class="initiative-body">SVP John Giannandrea (ex-Google) stepped down Dec 2025 after Apple Intelligence delays. His remit split three ways: Foundation Models + ML Research → Craig Federighi (SVP Software Engineering); Search &amp; Knowledge → Eddy Cue (SVP Services); AI Infrastructure → Sabih Khan (COO). New VP of AI Amar Subramanya (ex-Microsoft) reports to Federighi — a deliberate downgrade signaling AI is now a software function, not a standalone empire.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">Srouji hardware reorg — unified org, 5 focused teams</div>
+                <div class="initiative-body">Johny Srouji promoted to Chief Hardware Officer (April 2026, same day Ternus named CEO). Merged previously separate Hardware Engineering and Hardware Technologies into one unified group split into 5 teams. Goal: chip teams collaborating directly with product teams for AI and wearables. Announced May 2026 — WWDC June 8 is the first signal of whether the reorg is working.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">COO succession — Jeff Williams out, Sabih Khan in</div>
+                <div class="initiative-body">Jeff Williams (COO, once considered Cook's likely successor) formally transitioned his role to Sabih Khan in July 2025 per SEC 8-K filing, then retired late 2025. Khan, SVP of Operations since 2019, now holds COO title and inherited AI Infrastructure from Giannandrea. Williams's exit removed the last plausible operations-first CEO candidate, clearing the path for Ternus.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">Ternus leads both hardware and software design — first time since Jony Ive</div>
+                <div class="initiative-body">UI design chief Alan Dye left for Meta in Dec 2025, replaced by Stephen Lemay. Ternus was named executive sponsor of all design — hardware and software simultaneously — as Cook prepared him for the CEO role. The last person to hold unified authority over both was Jony Ive. Under Cook, design reported to an operations executive. That era is over.</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-name">AI &amp; Siri</div>
+              <div class="initiative initiative-key">
+                <div class="initiative-title">Siri LLM rebuild + "World Knowledge Answers"</div>
+                <div class="initiative-body">After two years of delays from incompatible architectures, Apple scrapped the old Siri stack entirely. The rebuilt LLM-backed Siri targets iOS 26.4. Internally codenamed "World Knowledge Answers" — turning Siri into an answer engine surfacing AI-generated summaries across web, images, and video. Planned expansion into Spotlight and Safari.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">Apple Foundation Models (AFM) — 3B on-device + PCC server</div>
+                <div class="initiative-body">Two-tier architecture: ~3B parameter on-device model via KV-cache sharing and 2-bit quantization on Apple Silicon; larger PT-MoE server model on Private Cloud Compute. Published as formal tech report (arXiv 2507.13575). Foundation Models framework exposes on-device inference to developers in 3 lines of Swift — free, fully on-device, no logging.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">Third-party model strategy — GPT-5, Gemini, Anthropic</div>
+                <div class="initiative-body">GPT-5 confirmed for iOS 26. Custom Gemini model trained to run on Apple's Private Cloud Compute servers. Eddy Cue publicly testified that AI will replace traditional search, signaling Apple is actively building independence from the $20B Google deal — while simultaneously deepening it. Discussions ongoing with Perplexity, DeepSeek, and xAI for Safari search options.</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-name">Developer Platform</div>
+              <div class="initiative initiative-key">
+                <div class="initiative-title">Xcode 26 — ChatGPT + multi-model AI assistant (WWDC 2025)</div>
+                <div class="initiative-body">Xcode 26 shipped ChatGPT built-in (no account required) plus API key support for Claude, LLaMA, and custom models. Supersedes the long-delayed Swift Assist (announced WWDC 2024, never shipped). "Xcode Intelligence Experience" is now a named team with active VP/engineer hiring against LLM expertise.</div>
+              </div>
+              <div class="initiative initiative-key">
+                <div class="initiative-title">Xcode 26.3 — agentic coding with Claude Agent + Codex (Feb 2026)</div>
+                <div class="initiative-body">Full agentic coding support: Claude Agent (built on Claude Agent SDK — same architecture as Claude Code) and OpenAI Codex operating autonomously inside Xcode. Agents execute multi-step tasks, query Apple developer docs natively, and visually verify SwiftUI Previews. VP Susan Prescott: "Agentic coding supercharges productivity and creativity, streamlining the development workflow."</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">Foundation Models framework — developer AI access</div>
+                <div class="initiative-body">Launched WWDC 2025: 3rd-party developers access Apple's on-device LLM via Swift API in 3 lines of code. Guided generation, tool calling, LoRA fine-tuning, streaming. Inference free and fully on-device — no PCC, no logging. Apple's answer to giving developers AI without compromising App Store privacy norms.</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-name">Hardware</div>
+              <div class="initiative initiative-key">
+                <div class="initiative-title">Foldable iPhone — fall 2026, Samsung supplying ~8M panels</div>
+                <div class="initiative-body">Apple's first foldable in production. Samsung supplying ~8M foldable display panels in 2026. Test production with Taiwanese suppliers, mass production targeting India. New SwiftUI foldable APIs and updated HIG shipping in Xcode 26. Every Apple developer must ramp on new form factor simultaneously with a new CEO taking the helm.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">Apple Silicon for AI — Neural Engine as primary differentiator</div>
+                <div class="initiative-body">The Srouji reorg explicitly brings chip teams closer to product teams as on-device AI inference becomes the core competitive moat. Future M-series and A-series chips designed with AFM inference as a first-class requirement. Apple's bet: privacy-first on-device AI is the moat no cloud competitor can replicate.</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-name">Operations</div>
+              <div class="initiative initiative-key">
+                <div class="initiative-title">AI Data Operations — Sabih Khan's expanded remit</div>
+                <div class="initiative-body">As part of the Giannandrea AI reorg, AI infrastructure and data operations were explicitly handed to COO Sabih Khan rather than staying within the AI/ML org. Khan now oversees the teams running Apple's AI data pipelines, training infrastructure, and operational backbone that the Siri rebuild and Apple Intelligence teams depend on. This is a meaningful shift — Apple's COO is now a direct stakeholder in AI delivery, not just supply chain.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">India PLI program — $51B exported, 25% of global iPhone output</div>
+                <div class="initiative-body">Apple joined India's Production-Linked Incentive scheme in FY2021-22. By Dec 2025: $51B in iPhone exports from India, 5 assembly facilities (3 Tata Group, 2 Foxconn). Target: majority of US-bound iPhones assembled in India by end of 2026. India's share projected at 28% of global output in 2026 — up from under 5% four years ago.</div>
+              </div>
+              <div class="initiative">
+                <div class="initiative-title">US Manufacturing Program — $600B commitment, 24 factories</div>
+                <div class="initiative-body">Cook committed $600B to US manufacturing investment and $100B to an American Manufacturing Program. New domestic partners: Bosch, Cirrus Logic, TDK, Qnity Electronics. Chip manufacturing across 24 factories in 12 states. Designed to maintain political goodwill with the Trump administration and protect against tariff escalation — not iPhone assembly.</div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact slide-dense">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple — Slide 4 · Opportunities</p>
+                <h2 class="headline">Six opportunities across Apple's org</h2>
+              </div>
+              <div class="slide-body">
+                <p class="subhead">Tiered by access, urgency, and strategic fit.</p>
+
+          <div class="tier-block">
+            <div class="tier-label t1">Tier 1 — Highest conviction and business urgency</div>
+            <div class="opp-row cols-2">
+              <div class="opp-card tier-1">
+                <div class="opp-card-main">
+                  <div class="opp-title">Siri / Apple Intelligence rebuild team</div>
+                  <div class="opp-body">Most time-pressured engineering group at Apple. Ternus's first year depends on this team shipping. Python + Swift + LLM integration code daily.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-why">Why Cursor</div>
+                  <div class="opp-field-text">Cursor's codebase-wide context and agentic multi-file editing cuts iteration time on LLM integration work — the exact loop this team runs hundreds of times a day. Coinbase engineers went from months to days on comparable refactors; NVIDIA saw immediate velocity gains across intertwined codebases.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-consequence">Negative Consequence</div>
+                  <div class="opp-field-text">Siri has already failed once — publicly, visibly, with Apple running ads for features that didn't exist. The rebuild is not a fresh start; it's a debt repayment with the world watching. Slow developer velocity on this team doesn't just extend the timeline — it extends the reputational damage and gives Google and Microsoft more time to make their AI lead feel permanent.</div>
+                </div>
+              </div>
+              <div class="opp-card tier-1">
+                <div class="opp-card-main">
+                  <div class="opp-title">Apple Services Engineering (ASE)</div>
+                  <div class="opp-body">App Store, iCloud, Apple Pay — large backend teams in Python + Go. 14% YoY revenue growth. Apple's highest-margin segment.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-why">Why Cursor</div>
+                  <div class="opp-field-text">Cursor is an IDE, not a new tool engineers have to learn. It layers AI into the environment they already live in — no retraining, no workflow disruption, no adoption campaign. Tools that require behavioral change see slow, uneven uptake at this scale. Cursor sees 60–100% org adoption within weeks. Enterprise customers see 25%+ lift in PR volume and 39% more merged PRs.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-consequence">Negative Consequence</div>
+                  <div class="opp-field-text">Services is Apple's margin engine — and if the $20B Google search deal gets unwound by the DOJ, that revenue doesn't get replaced by adding headcount. It gets replaced by the Services roadmap shipping faster. Pulling hundreds of engineers into retraining cycles for new tooling is exactly the wrong investment at exactly the wrong time.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-block">
+            <div class="tier-label t2">Tier 2 — Strong fit and broad array of potential use cases</div>
+            <div class="opp-row cols-3">
+              <div class="opp-card tier-2">
+                <div class="opp-card-main">
+                  <div class="opp-title">Xcode Intelligence experience team</div>
+                  <div class="opp-body">Apple is building the AI-native IDE for 35M developers. The team shipping that product needs to be the most AI-native engineering team at Apple.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-why">Why Cursor</div>
+                  <div class="opp-field-text">You can't build the world's best agentic coding experience without living inside one. Cursor is the only IDE where AI-native development — agents that plan, edit across files, run builds, and iterate autonomously — is the default mode, not a feature. The Xcode Intelligence team working in Cursor isn't just a productivity play; it's competitive research. Every workflow they experience becomes a standard they're accountable to shipping.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-consequence">Negative Consequence</div>
+                  <div class="opp-field-text">Xcode 26.3's open MCP architecture means developers can already run Cursor directly against Apple's own tools. If the Xcode Intelligence experience ships below that bar, developers won't complain — they'll just leave. Apple loses the primary surface where its entire developer ecosystem works every day, to a third-party tool running on Apple's own infrastructure.</div>
+                </div>
+              </div>
+              <div class="opp-card tier-2">
+                <div class="opp-card-main">
+                  <div class="opp-title">Foldable iPhone platform team</div>
+                  <div class="opp-body">New form factor = new APIs, new SwiftUI paradigms, every engineer ramping simultaneously. Fixed ship date.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-why">Why Cursor</div>
+                  <div class="opp-field-text">Cursor's ability to index and reason over unfamiliar codebases accelerates ramp on new APIs and UI paradigms. What used to take weeks of repo navigation is now a structured onboarding process — as validated by enterprise deployments at comparable scale.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-consequence">Negative Consequence</div>
+                  <div class="opp-field-text">The launch date is fixed. Slower onboarding means less time shipping features, more bugs at launch, and a first-gen foldable that under-delivers against Samsung's five years of iteration.</div>
+                </div>
+              </div>
+              <div class="opp-card tier-2">
+                <div class="opp-card-main">
+                  <div class="opp-title">Operations engineering &amp; custom tooling</div>
+                  <div class="opp-body">Sabih Khan's org spans supply chain, procurement, manufacturing, and logistics — post-reorg, AI data operations. One of the most complex engineering footprints on the planet.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-why">Why Cursor</div>
+                  <div class="opp-field-text">Cursor accelerates the engineers building operations infrastructure as Apple races to shift production to India and absorb tariff exposure. Faster iteration directly compresses the supply chain adaptation cycle — with measurable bottom-line value in a margin-pressured year.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-consequence">Negative Consequence</div>
+                  <div class="opp-field-text">Every week of delay in operations tooling is a week of margin drag on a hardware business already under tariff pressure. Slower tooling iteration extends Apple's exposure to cost volatility in the supply chain transition.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-block">
+            <div class="tier-label t3">Tier 3 — Interesting, harder to access</div>
+            <div class="opp-row cols-1">
+              <div class="opp-card tier-3">
+                <div class="opp-card-main">
+                  <div class="opp-title">Apple Silicon / hardware engineering</div>
+                  <div class="opp-body">C/C++ + bespoke toolchains. Cursor value more limited — but growing post-Srouji reorg as cross-functional handoffs increase.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-why">Why Cursor</div>
+                  <div class="opp-field-text">Cursor's code review and generation capabilities reduce defect rates in complex, safety-critical C/C++ codebases. Post-reorg, as silicon teams hand off more frequently to product teams, Cursor's shared context and audit trail supports cleaner governance across org boundaries.</div>
+                </div>
+                <div class="opp-labeled-section">
+                  <div class="opp-field-label label-consequence">Negative Consequence</div>
+                  <div class="opp-field-text">As Apple's silicon roadmap accelerates to compete with Huawei's Kirin stack, defects and slow handoffs in chip-to-software integration become schedule risks — not just quality risks.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+      </section>
+
+      <!-- Section 2: Organization Map -->
+      <section data-section-name="Organization Map">
+        <section class="slide-hero">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · May 2026</p>
+                <h2 class="headline">Organizational Map and Approach</h2>
+              </div>
+              <div class="slide-body">
+                <p class="hero-line">People, power, and influence</p>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact slide-org slide-dense">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · Organization Map</p>
+                <h2 class="headline">Apple organizes by function, not product</h2>
+              </div>
+              <div class="slide-body">
+                <p class="subhead">There is no 'iPhone team.' Critical engineering belongs to one of these functional orgs — software, hardware, services, AI/ML, or operations.</p>
+
+                <div class="org-container" id="org-chart">
+                  <svg class="org-connectors" aria-hidden="true"></svg>
+                  <div class="org-layout">
+                    <div class="org-tree-wrap">
+                      <div class="org-tree">
+                        <div class="org-node">
+                          <div class="org-card" data-id="ternus">
+                            <div class="org-name">John Ternus</div>
+                            <div class="org-title">CEO — formerly SVP Hardware Engineering</div>
+                            <div class="org-note-rule"></div>
+                            <div class="org-note">First HW engineer to lead Apple since Jobs. Owns design + hardware simultaneously.</div>
+                          </div>
+                          <div class="org-children">
+                            <div class="org-branch">
+                              <div class="org-node">
+                                <div class="org-card" data-id="srouji">
+                                  <div class="org-name">Johny Srouji</div>
+                                  <div class="org-title">Chief Hardware Officer</div>
+                                  <div class="org-note-rule"></div>
+                                  <div class="org-note">Unified chips + silicon under one roof. "AI-era hardware integration."</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="org-branch">
+                              <div class="org-node">
+                                <div class="org-card" data-id="federighi">
+                                  <div class="org-name">Craig Federighi</div>
+                                  <div class="org-title">SVP Software Engineering</div>
+                                  <div class="org-note-rule"></div>
+                                  <div class="org-note">All OSes, Apple Intelligence, Core Frameworks, APIs, System UX.</div>
+                                </div>
+                                <div class="org-children">
+                                  <div class="org-branch">
+                                    <div class="org-node">
+                                      <div class="org-card" data-id="rockwell">
+                                        <div class="org-name">Mike Rockwell</div>
+                                        <div class="org-title">VP, Siri Engineering</div>
+                                        <div class="org-note-rule"></div>
+                                        <div class="org-note">Brought in to lead after delays, bugs, and loss of trust.</div>
+                                      </div>
+                                      <div class="org-children">
+                                        <div class="org-branch">
+                                          <div class="org-node">
+                                            <div class="org-card" data-id="dupin">
+                                              <div class="org-name">Benoit Dupin</div>
+                                              <div class="org-title">Director, AKI</div>
+                                              <div class="org-note-rule"></div>
+                                              <div class="org-note">3rd AKI leader in 6 months. Owns Siri answer engine for iOS 26.4.</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="org-branch">
+                                    <div class="org-node">
+                                      <div class="org-card" data-id="subraymanya">
+                                        <div class="org-name">Amar Subraymanya</div>
+                                        <div class="org-title">VP of AI/ML</div>
+                                        <div class="org-note-rule"></div>
+                                        <div class="org-note">Owns Apple Intelligence + all in-house foundation models.</div>
+                                      </div>
+                                      <div class="org-children">
+                                        <div class="org-branch">
+                                          <div class="org-node">
+                                            <div class="org-card" data-id="xu">
+                                              <div class="org-name">Michael Xu</div>
+                                              <div class="org-title">Director, ML Platform &amp; Search</div>
+                                              <div class="org-note-rule"></div>
+                                              <div class="org-note">Search platform, inference, AppleBot, Apple Intelligence delivery.</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="org-branch">
+                                          <div class="org-node">
+                                            <div class="org-card" data-id="vorrath">
+                                              <div class="org-name">Kim Vorrath</div>
+                                              <div class="org-title">VP Program Management</div>
+                                              <div class="org-note-rule"></div>
+                                              <div class="org-note">Brought in to fix Siri. Owns schedule &amp; delivery. Motivated by preventing another slip.</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="org-children org-children-kremenek">
+                                  <div class="org-branch">
+                                    <div class="org-node">
+                                      <div class="org-card" data-id="kremenek">
+                                        <div class="org-name">Ted Kremenek</div>
+                                        <div class="org-title">Director, Languages &amp; Runtimes</div>
+                                        <div class="org-note-rule"></div>
+                                        <div class="org-note">Publicly vocal about developer productivity; strong external brand at WWDC. Cursor + Swift just announced support.</div>
+                                      </div>
+                                      <div class="org-children">
+                                        <div class="org-branch">
+                                          <div class="org-node">
+                                            <div class="org-card" data-id="gregor">
+                                              <div class="org-name">Doug Gregor</div>
+                                              <div class="org-title">Distinguished Engineer</div>
+                                              <div class="org-note-rule"></div>
+                                              <div class="org-note">DE is equivalent to VP but as an IC. Only ~24 exist at Apple — their opinions hold massive weight. Publicly active on Swift forums alongside Kremenek.</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="org-branch org-branch-cue">
+                              <div class="org-node">
+                                <div class="org-card" data-id="cue">
+                                  <div class="org-name">Eddie Cue</div>
+                                  <div class="org-title">SVP Services &amp; Health</div>
+                                  <div class="org-note-rule"></div>
+                                  <div class="org-note">P&amp;L of Services + Apple Services Engineering (ASE).</div>
+                                </div>
+                                <div class="org-children">
+                                  <div class="org-branch">
+                                    <div class="org-node">
+                                      <div class="org-card" data-id="mirrashidi">
+                                        <div class="org-name">Payam Mirrashidi</div>
+                                        <div class="org-title">VP Engineering (ASE)</div>
+                                        <div class="org-note-rule"></div>
+                                        <div class="org-note">Owns Apple Services Engineering.</div>
+                                      </div>
+                                      <div class="org-children">
+                                        <div class="org-branch">
+                                          <div class="org-node">
+                                            <div class="org-card" data-id="shankar">
+                                              <div class="org-name">Vikram Shankar</div>
+                                              <div class="org-title">Head of E2E Performance, ASE</div>
+                                              <div class="org-note-rule"></div>
+                                              <div class="org-note">High-visibility, high-consequence function with direct revenue implications.</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="org-branch org-branch-khan">
+                              <div class="org-node">
+                                <div class="org-card" data-id="khan">
+                                  <div class="org-name">Sabih Khan</div>
+                                  <div class="org-title">COO</div>
+                                  <div class="org-note-rule"></div>
+                                  <div class="org-note">Supply chain, manufacturing, QC + newly AI data operations.</div>
+                                </div>
+                                <div class="org-children">
+                                  <div class="org-branch">
+                                    <div class="org-node">
+                                      <div class="org-card" data-id="zhang">
+                                        <div class="org-name">Rui Zhang</div>
+                                        <div class="org-title">Senior Director, Solutions &amp; Strategy</div>
+                                        <div class="org-note-rule"></div>
+                                        <div class="org-note">AI/ML transformation across supply chain &amp; sourcing.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="org-floating">
+                      <div class="org-card org-card-dashed" data-id="prescott" data-no-connect>
+                        <div class="org-name">Susan Prescott</div>
+                        <div class="org-title">VP Worldwide Developer Relations</div>
+                        <div class="org-note-rule"></div>
+                        <div class="org-note">Public face of Xcode, Swift &amp; the developer ecosystem. Speaks on developer tools at WWDC. (Marketing Org)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact slide-messaging slide-dense">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · Outbound strategy · May 2026</p>
+                <h2 class="headline">Messaging</h2>
+              </div>
+              <div class="slide-body">
+                <div class="messaging-columns">
+                  <article class="messaging-card">
+                    <div class="messaging-person">
+                      <div class="messaging-avatar-wrap">
+                        <img src="https://storage.ghost.io/c/49/a0/49a0c44f-2e08-4cc3-80a6-bf8207f188f4/content/images/2025/01/5065dae0a75bfba8.jpg" alt="Kim Vorrath" width="44" height="44" referrerpolicy="no-referrer">
+                      </div>
+                      <div>
+                        <p class="messaging-name">Kim Vorrath</p>
+                        <p class="messaging-person-title">VP, Program Management — Apple AI &amp; ML</p>
+                      </div>
+                    </div>
+                    <hr class="messaging-rule">
+                    <span class="channel-badge badge-email">Cold email</span>
+                    <p class="messaging-rationale">Brought in specifically to fix Siri and Apple Intelligence after a public failure — she owns the timeline. She is virtually a ghost online: no public social presence, no interviews, no forum posts. Cold email is the primary path, or a warm referral if one can be sourced.</p>
+                    <hr class="messaging-rule">
+                    <p class="messaging-draft-label">Draft</p>
+                    <p class="messaging-subject">Subject: Kicking *ss on Siri</p>
+                    <p class="messaging-draft-body">Kim —
+
+Someone who's worked with you for years was asked to describe you and they said: "She kicks all the asses." That's a great reputation for getting things done.
+
+Since getting Siri on track is what you're on the hook for, consider this: Cursor helped NVIDIA 3x their code output with zero increase in bugs across 30,000 engineers.
+
+Feels like what the Siri rebuild needs right now.
+
+Worth 10 minutes?
+
+David</p>
+                  </article>
+                  <article class="messaging-card">
+                    <div class="messaging-person">
+                      <div class="messaging-avatar-wrap" id="ted-avatar-wrap">
+                        <img id="ted-headshot" src="https://unavatar.io/linkedin/tedkremenek" alt="Ted Kremenek" width="44" height="44" referrerpolicy="no-referrer" data-linkedin="https://www.linkedin.com/in/tedkremenek/overlay/photo/">
+                        <span class="messaging-initials" aria-hidden="true">TK</span>
+                      </div>
+                      <div>
+                        <p class="messaging-name">Ted Kremenek</p>
+                        <p class="messaging-person-title">Director, Languages &amp; Runtimes — Apple</p>
+                      </div>
+                    </div>
+                    <hr class="messaging-rule">
+                    <span class="channel-badge badge-forums">Swift forums — organic post</span>
+                    <p class="messaging-rationale">Owns Swift, Xcode tooling, and the Languages &amp; Runtimes team. Swift.org published a dedicated Cursor setup guide on April 8 with zero community follow-up — no announcement thread on the Swift Forums, and an existing thread complaining about lack of Cursor support that has had no update since 2025. The play: become an organic community member on the Swift Forums and open a thread he would naturally reply to.</p>
+                    <hr class="messaging-rule">
+                    <p class="messaging-draft-label">Draft — forums.swift.org</p>
+                    <p class="messaging-subject">Cursor + Swift on Open VSX — what does this mean for agentic Swift development outside Xcode?</p>
+                    <p class="messaging-draft-body">Saw the recent swift.org post announcing first-class Cursor support via Open VSX — great milestone, and the dedicated setup guide is a nice touch.
+
+It got me thinking about something I've been running into in practice. As Swift expands to Android, Linux, and server-side stacks, developers in those environments are increasingly reaching for Cursor as their primary IDE. But the agentic experience for Swift in Cursor today is weaker than Python or TypeScript — specifically:
+
+1. Swift 6 concurrency patterns — agents consistently generate pre-Swift 6 code that fails strict concurrency checks.
+
+2. Package graph reasoning — for multi-module packages, Cursor struggles to reason across module boundaries.
+
+With swift.org now actively publishing Cursor guidance, is there appetite to build an official skills/rules layer under the swiftlang org — something that tracks language evolution rather than relying on individual .cursorrules files?
+
+Is this something the tooling workgroup has discussed?</p>
+                  </article>
+                  <article class="messaging-card">
+                    <div class="messaging-person">
+                      <div class="messaging-avatar-wrap" id="susan-avatar-wrap">
+                        <img id="susan-headshot" src="https://media.licdn.com/dms/image/v2/D5603AQED895_5pTPQA/profile-displayphoto-crop_800_800/B56ZiW5mTDHUAI-/0/1754878338646?e=1781136000&amp;v=beta&amp;t=O2SMNtQhvPrSLR0b29Yvf1GVAcpzUwnNsXrZrVrZyoQ" alt="Susan Prescott" width="44" height="44" referrerpolicy="no-referrer">
+                        <span class="messaging-initials" aria-hidden="true">SP</span>
+                      </div>
+                      <div>
+                        <p class="messaging-name">Susan Prescott</p>
+                        <p class="messaging-person-title">VP, Worldwide Developer Relations — Apple</p>
+                      </div>
+                    </div>
+                    <hr class="messaging-rule">
+                    <span class="channel-badge badge-email">In person · WWDC June 8</span>
+                    <p class="messaging-rationale">Apple's public face for developer relations — she personally put her name on the Xcode 26.3 agentic coding launch. Not a direct buyer, but a high-value ecosystem influencer. Best approached in person at WWDC; she'll be on-site at Apple Park all day Monday June 8.</p>
+                    <hr class="messaging-rule">
+                    <p class="messaging-draft-label">Draft</p>
+                    <p class="messaging-subject">Subject: Jensen's favorite enterprise AI service</p>
+                    <p class="messaging-draft-body">Susan —
+
+You've said your goal is to put industry-leading technologies in the hands of developers — and you've been one of the loudest advocates for agentic coding as the linchpin of that effort.
+
+Here's something worth knowing: Cursor is the #1 consumer of Anthropic credits globally, and when Codex launched Spark, nearly half of all credits were consumed there too. The engineers you're trying to reach are already inside Cursor.
+
+Given your goal of reaching 35M developers, I'd love to explore whether Cursor can be an avenue to help you get there. We support 70% of the Fortune 1000 and Jensen Huang called it his "favorite Enterprise AI service" after rolling it out to 100% of NVIDIA's engineers.
+
+I'll be at WWDC on Monday — any chance you have 15 minutes before or after the keynote? Would love to grab a coffee at Apple Park.
+
+David</p>
+                  </article>
+                  <article class="messaging-card">
+                    <div class="messaging-person">
+                      <div class="messaging-avatar-wrap avatar-green" id="rui-avatar-wrap">
+                        <img id="rui-headshot" src="https://media.licdn.com/dms/image/v2/D5603AQH7zFN2y1AmaQ/profile-displayphoto-crop_800_800/B56Zea5tIeHUAI-/0/1750650508090?e=1781136000&amp;v=beta&amp;t=3obtqKoty6DjF0dFrio_sAB2wsHX9Z857-Y2BYbn6XY" alt="Rui Zhang" width="44" height="44" referrerpolicy="no-referrer">
+                        <span class="messaging-initials" aria-hidden="true">RZ</span>
+                      </div>
+                      <div>
+                        <p class="messaging-name">Rui Zhang</p>
+                        <p class="messaging-person-title">Senior Director, Solutions &amp; Strategy — Apple GSSM</p>
+                      </div>
+                    </div>
+                    <hr class="messaging-rule">
+                    <span class="channel-badge badge-forums">Warm network</span>
+                    <p class="messaging-rationale">Direct prior relationship from Airtable. Reports to Sabih Khan and owns AI transformation across GSSM. Has first-hand context on the platform limitations Airtable hit with high-value supply chain use cases — Cursor solves exactly what couldn't be solved then. Warm intro, no cold outreach needed.</p>
+                    <hr class="messaging-rule">
+                    <p class="messaging-draft-label">Draft</p>
+                    <p class="messaging-subject">Subject: Catching up + something worth 15 minutes</p>
+                    <p class="messaging-draft-body">Rui,
+
+Hope all is well! Caught up with Liz recently and she mentioned you welcomed a new addition to the family — congratulations. We just had our 2nd girl and she's 4 months old now :)
+
+When we last spoke, you were looking for ways to transform GSSM with AI and while Airtable helped, there were high-value use cases like "Use Case #2" that the platform couldn't handle at the scale you needed.
+
+I came across something that can. Jensen Huang called it his "favorite Enterprise AI service" and deployed it to every engineer at NVIDIA. I think it can help you too.
+
+Worth 15 minutes?
+
+P.S. cc'ing you as well @Daisy in case this is interesting for you as well!
+
+David</p>
+                  </article>
+                  <article class="messaging-card">
+                    <div class="messaging-person">
+                      <div class="messaging-avatar-wrap avatar-purple" id="craig-avatar-wrap">
+                        <img id="craig-headshot" src="https://www.apple.com/leadership/images/bio/craig_federighi_image.png.og.png?1772835021739" alt="Craig Federighi" width="44" height="44" referrerpolicy="no-referrer">
+                        <span class="messaging-initials" aria-hidden="true">CF</span>
+                      </div>
+                      <div>
+                        <p class="messaging-name">Craig Federighi</p>
+                        <p class="messaging-person-title">SVP, Software Engineering — Apple</p>
+                      </div>
+                    </div>
+                    <hr class="messaging-rule">
+                    <span class="channel-badge badge-investor">Investor referral</span>
+                    <p class="messaging-rationale">Owns all of Apple's software engineering and took direct control of Siri and Apple Intelligence in late 2025 after expressing frustration with the pace of progress. The highest-leverage engineering executive at Apple — not reachable cold. Approach via investor who has a personal relationship and WWDC access.</p>
+                    <hr class="messaging-rule">
+                    <p class="messaging-draft-label">Draft — investor forward</p>
+                    <p class="messaging-subject">Subject: Intro — Cursor</p>
+                    <p class="messaging-draft-body">Hey Craig,
+
+Great seeing you at WWDC — exciting things ahead for you at Apple.
+
+I know you've been frustrated about the pace of AI efforts and I have something I think could play a major role in helping you move fast without breaking things.
+
+I recently partnered with Michael Truell from Cursor, who built an incredible agentic AI coding platform. Jensen deployed it to 100% of his engineers at NVIDIA and called it his "favorite Enterprise AI service."
+
+Given that Apple Intelligence and the Siri rebuild are your big rocks right now, I'd love to set up a conversation. Could you connect me with either Mike Rockwell or Amar Subraymanya so Michael and I can discuss the opportunity?
+
+Many thanks,
+[Investor name]</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+      </section>
+
+      <!-- Section 3: PG Plan -->
+      <section data-section-name="PG Plan">
+        <section class="slide-hero">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · May 2026</p>
+                <h2 class="headline">90 Day PG Momentum Plan</h2>
+              </div>
+              <div class="slide-body">
+                <p class="hero-line">Foundation · Build presence · Conversion</p>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-compact slide-momentum slide-dense">
+          <div class="slide-layout">
+            <div class="slide-main">
+              <div class="slide-header">
+                <p class="eyebrow">Apple Inc. · Pipeline Generation · May 2026</p>
+                <h2 class="headline">90-Day Momentum Plan</h2>
+              </div>
+              <div class="slide-body">
+                <div class="momentum-columns">
+                  <div class="momentum-phase">
+                    <div class="phase-header">
+                      <span class="momentum-badge badge-foundation">Days 1–30 · Foundation</span>
+                      <p class="momentum-phase-title">Map the account, plant the flags</p>
+                    </div>
+                    <p class="momentum-phase-sub">Intelligence gathering + first signals in market before/during WWDC (June 9)</p>
+                    <div class="momentum-cards">
+                      <div class="momentum-card">
+                        <i class="ti ti-search card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Free user audit</p>
+                        <p class="momentum-card-detail">Pull Cursor usage data for @apple.com emails. Warm outreach to active free users first.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-messages card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Community seeding</p>
+                        <p class="momentum-card-detail">Swift Forums, r/swift, Mastodon/X dev circles. Share real Cursor + Xcode workflows; spark discourse.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-mail card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Cold outbound</p>
+                        <p class="momentum-card-detail">Xcode Intelligence team leads + Siri/AI eng managers. Hook: Claude Agent in Xcode 26.3.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-building-community card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">WWDC activation</p>
+                        <p class="momentum-card-detail">Attend fringe events, Apple dev labs, side dinners. Prospect Swift/Xcode eng in person.</p>
+                      </div>
+                    </div>
+                    <div class="momentum-goal">
+                      <p class="momentum-goal-label">30-Day Goal</p>
+                      <p class="momentum-goal-text">10+ booked discovery calls; 3+ follow-up conversations from WWDC events</p>
+                    </div>
+                  </div>
+                  <div class="momentum-phase">
+                    <div class="phase-header">
+                      <span class="momentum-badge badge-build">Days 31–60 · Build presence</span>
+                      <p class="momentum-phase-title">Creating momentum through live events</p>
+                    </div>
+                    <p class="momentum-phase-sub">Events, content, and experiences that pull Apple eng toward Cursor</p>
+                    <div class="momentum-cards">
+                      <div class="momentum-card">
+                        <i class="ti ti-video card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Swift/Xcode webinar</p>
+                        <p class="momentum-card-detail">Host a technical session on agentic coding with Cursor + Xcode 26.3. Target Apple dev community.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-school card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Workshop series</p>
+                        <p class="momentum-card-detail">Hands-on virtual sessions for Apple eng teams. Focused on real workflows, not product pitches.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-tools-kitchen-2 card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">In-person events</p>
+                        <p class="momentum-card-detail">Dinners, meetups, and side events in Cupertino/SF. Build relationships outside the sales context.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-presentation card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Proof-point content</p>
+                        <p class="momentum-card-detail">Demos and write-ups on Cursor + Xcode agentic flow. Built to circulate in Apple dev circles.</p>
+                      </div>
+                    </div>
+                    <div class="momentum-goal">
+                      <p class="momentum-goal-label">60-Day Goal</p>
+                      <p class="momentum-goal-text">2+ hosted events with Apple eng attendance; champion tested and identified in ≥1 Tier 1 team; interest in active evaluation</p>
+                    </div>
+                  </div>
+                  <div class="momentum-phase">
+                    <div class="phase-header">
+                      <span class="momentum-badge badge-conversion">Days 61–90 · Conversion</span>
+                      <p class="momentum-phase-title">Drive to pilot or commercial motion</p>
+                    </div>
+                    <p class="momentum-phase-sub">Leverage proof points and momentum to engage senior leadership and close</p>
+                    <div class="momentum-cards">
+                      <div class="momentum-card">
+                        <i class="ti ti-flag card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Pilot proposal</p>
+                        <p class="momentum-card-detail">Structured pilot for Tier 1 team (internal eng or Siri rebuild). Time-boxed with clear success metrics.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-git-branch card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Executive alignment</p>
+                        <p class="momentum-card-detail">Push for VP/director-level intro via champion. Frame against Ternus HW/SW convergence strategy.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-star card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Senior exec network</p>
+                        <p class="momentum-card-detail">Use pilot proof points to engage network into Apple C-suite and senior leadership. Warm, not cold.</p>
+                      </div>
+                      <div class="momentum-card">
+                        <i class="ti ti-arrows-split-2 card-icon" aria-hidden="true"></i>
+                        <p class="momentum-card-label">Multi-thread the org</p>
+                        <p class="momentum-card-detail">Expand contacts across Tier 1 teams. Don't let the deal ride on a single champion or thread.</p>
+                      </div>
+                    </div>
+                    <div class="momentum-goal">
+                      <p class="momentum-goal-label">90-Day Goal</p>
+                      <p class="momentum-goal-text">≥1 active pilot or commercial evaluation; exec sponsor engaged; multiple threads active across Tier 1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="slide-footer">
+              <span class="footer-badge">CONFIDENTIAL</span>
+            </footer>
+          </div>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: false,
+      progress: true,
+      slideNumber: false,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      backgroundTransition: 'fade',
+      width: 1440,
+      height: 810,
+      margin: 0.02,
+      center: false,
+      embedded: false,
+    });
+
+    const indicator = document.getElementById('section-indicator');
+
+    function updateSectionIndicator() {
+      const indices = Reveal.getIndices();
+      const horizontal = Reveal.getSlidesElement().querySelectorAll(':scope > section');
+      const section = horizontal[indices.h];
+      const name = section && section.dataset.sectionName
+        ? section.dataset.sectionName
+        : 'Account Thesis';
+      indicator.textContent = name;
+    }
+
+    Reveal.on('slidechanged', updateSectionIndicator);
+    Reveal.on('ready', updateSectionIndicator);
+
+    document.getElementById('home-btn').addEventListener('click', function () {
+      Reveal.slide(0, 0, 0);
+    });
+
+    const ORG_EDGES = [
+      ['ternus', 'srouji'],
+      ['ternus', 'federighi'],
+      ['ternus', 'cue'],
+      ['ternus', 'khan'],
+      ['federighi', 'rockwell'],
+      ['federighi', 'subraymanya'],
+      ['federighi', 'kremenek'],
+      ['rockwell', 'dupin'],
+      ['subraymanya', 'xu'],
+      ['subraymanya', 'vorrath'],
+      ['cue', 'mirrashidi'],
+      ['mirrashidi', 'shankar'],
+      ['khan', 'zhang'],
+      ['kremenek', 'gregor'],
+    ];
+
+    function layoutOrgPositions() {
+      const container = document.getElementById('org-chart');
+      if (!container) return;
+
+      const slide = container.closest('section.present');
+      if (!slide) return;
+
+      var kremenekBranch = container.querySelector('.org-children-kremenek > .org-branch');
+      var cueBranch = container.querySelector('.org-branch-cue');
+      var khanBranch = container.querySelector('.org-branch-khan');
+      var federighi = container.querySelector('[data-id="federighi"]');
+      var kremenek = container.querySelector('[data-id="kremenek"]');
+      var cue = container.querySelector('[data-id="cue"]');
+
+      if (kremenekBranch) kremenekBranch.style.transform = '';
+      if (cueBranch) cueBranch.style.transform = '';
+      if (khanBranch) khanBranch.style.transform = '';
+
+      if (federighi && kremenek && kremenekBranch) {
+        var fedRect = federighi.getBoundingClientRect();
+        var kremRect = kremenek.getBoundingClientRect();
+        var centerFed = fedRect.left + fedRect.width / 2;
+        var centerKrem = kremRect.left + kremRect.width / 2;
+        kremenekBranch.style.transform = 'translateX(' + (centerFed - centerKrem) + 'px)';
+      }
+
+      if (kremenek && cue && cueBranch) {
+        var kremRect2 = kremenek.getBoundingClientRect();
+        var cueRect = cue.getBoundingClientRect();
+        var minGap = 32;
+        var pushRight = kremRect2.right + minGap - cueRect.left;
+        if (pushRight > 0) {
+          cueBranch.style.transform = 'translateX(' + pushRight + 'px)';
+          if (khanBranch) {
+            khanBranch.style.transform = 'translateX(' + pushRight + 'px)';
+          }
+        }
+      }
+
+      var floating = container.querySelector('.org-floating');
+      var rockwell = container.querySelector('[data-id="rockwell"]');
+      if (floating && rockwell) {
+        var cr = container.getBoundingClientRect();
+        var rr = rockwell.getBoundingClientRect();
+        floating.style.paddingTop = Math.max(0, Math.round(rr.top - cr.top)) + 'px';
+      }
+    }
+
+    function drawOrgConnectors() {
+      const container = document.getElementById('org-chart');
+      if (!container) return;
+
+      const slide = container.closest('section.present');
+      if (!slide) return;
+
+      const svg = container.querySelector('.org-connectors');
+      const cr = container.getBoundingClientRect();
+      const w = cr.width;
+      const h = cr.height;
+      if (w < 1 || h < 1) return;
+
+      svg.setAttribute('width', w);
+      svg.setAttribute('height', h);
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.innerHTML = '';
+
+      ORG_EDGES.forEach(function (edge) {
+        const parent = container.querySelector('[data-id="' + edge[0] + '"]');
+        const child = container.querySelector('[data-id="' + edge[1] + '"]');
+        if (!parent || !child || child.hasAttribute('data-no-connect')) return;
+
+        const pr = parent.getBoundingClientRect();
+        const chr = child.getBoundingClientRect();
+        const x1 = pr.left + pr.width / 2 - cr.left;
+        const y1 = pr.bottom - cr.top;
+        const x2 = chr.left + chr.width / 2 - cr.left;
+        const y2 = chr.top - cr.top;
+        const midY = y1 + (y2 - y1) / 2;
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M ' + x1 + ' ' + y1 + ' L ' + x1 + ' ' + midY + ' L ' + x2 + ' ' + midY + ' L ' + x2 + ' ' + y2);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', '#D2D2D7');
+        path.setAttribute('stroke-width', '0.8');
+        svg.appendChild(path);
+      });
+    }
+
+    function scheduleOrgDraw() {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          layoutOrgPositions();
+          drawOrgConnectors();
+        });
+      });
+    }
+
+    let orgResizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(orgResizeTimer);
+      orgResizeTimer = setTimeout(scheduleOrgDraw, 100);
+    });
+
+    Reveal.on('slidechanged', scheduleOrgDraw);
+    Reveal.on('slidetransitionend', scheduleOrgDraw);
+    Reveal.on('ready', scheduleOrgDraw);
+    Reveal.on('resize', scheduleOrgDraw);
+
+    function initMessagingAvatars() {
+      document.querySelectorAll('.messaging-avatar-wrap').forEach(function (wrap) {
+        var initials = wrap.querySelector('.messaging-initials');
+        var img = wrap.querySelector('img');
+        if (!initials || !img) return;
+
+        function useInitials() {
+          wrap.classList.add('is-fallback');
+        }
+
+        img.addEventListener('error', useInitials);
+        if (img.complete && img.naturalWidth === 0) {
+          useInitials();
+        }
+      });
+    }
+
+    initMessagingAvatars();
+  </script>
+</body>
+</html>

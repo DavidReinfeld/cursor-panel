@@ -1,0 +1,11 @@
+{
+  "name": "cursor-panel",
+  "private": true,
+  "description": "Apple/Cursor AE presentation utilities",
+  "scripts": {
+    "momentum-slide": "node add_momentum_slide.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
